@@ -436,7 +436,7 @@ footer {
   </div>
   <div class="formula-pill">
     (b − a) × 0,20 = avanse-MVA<br>
-    b × 0,25 = normal-MVA
+    b × 25/125 = normal-MVA
   </div>
 </header>
 
@@ -484,7 +484,7 @@ footer {
         <div class="c-val" id="res-avanse">kr 0</div>
       </div>
       <div class="compare-card">
-        <div class="c-label">Normal-MVA (25%)</div>
+        <div class="c-label">Normal-MVA (b × 25/125)</div>
         <div class="c-val" id="res-normal">kr 0</div>
       </div>
     </div>
@@ -504,7 +504,7 @@ footer {
 </main>
 
 <footer>
-  Avanse-MVA = (b − a) × 0,20 &nbsp;·&nbsp; Normal-MVA = b × 0,25 &nbsp;·&nbsp;
+  Avanse-MVA = (b − a) × 0,20 &nbsp;·&nbsp; Normal-MVA = b × 25/125 &nbsp;·&nbsp;
   Negativ fortjeneste gir kr 0 i avanse-MVA.<br>
   Gjelder kun kjøp fra privatpersoner/ikke-avgiftspliktige (mval. §4-5). Konsulter regnskapsfører.
 </footer>
@@ -543,7 +543,7 @@ function calculate() {
 
   const margin = b - a;
   const avanseUnit = margin > 0 ? margin * 0.20 : 0;
-  const normalUnit = b * 0.25;
+  const normalUnit = b * 25 / 125;
   const savedUnit  = normalUnit - avanseUnit;
 
   document.getElementById('res-avanse').textContent = fmt(avanseUnit * qty);
